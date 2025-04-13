@@ -1,7 +1,9 @@
+/* Genel Navbar Stili */
 .navbar-section {
   .navbar {
     padding: 14px 0;
-    background-color: #0d0e10;
+    background-color: #0d0e10; /* Light mode için siyah arka plan */
+    transition: background-color 0.3s ease; /* Geçiş animasyonu ekliyoruz */
 
     .container {
       display: flex;
@@ -13,9 +15,14 @@
           width: 100px;
           height: 50px;
           color: white;
+          
         }
       }
-      .userNameNav{color: #fff;}
+
+      .userNameNav {
+        color: #fff;
+      }
+
       .navlist {
         display: flex;
         justify-content: space-evenly;
@@ -78,6 +85,71 @@
   }
 }
 
+/* Dark Mode Stilini Uygulama */
+body.dark {
+  .navbar-section {
+    .navbar {
+      background-color: #fff; /* Dark mode için beyaz arka plan */
+      color: #0d0e10; /* Yazı rengi siyah */
+
+      .container {
+        .bike-logo{
+          svg{
+            color: #000;
+          }
+        }
+        .navlist a {
+          color: #0d0e10;
+        }
+
+        .userNameNav {
+          color: #0d0e10;
+        }
+        .language-dropdown {
+          svg{
+            color: white;
+          }
+        }
+        .dropdown{
+          .dropdown-menu {
+            li,
+            a {
+              color: white !important;
+            }
+          }
+
+          button {
+            background-color: #333; /* Koyu buton */
+            color: white;
+  
+            &:hover {
+              background-color: #444;
+            }
+          }
+        }
+         
+
+        .dropdown-menu {
+          background-color: #222;
+        }
+
+        .wrapper .basket,
+        .wrapper .heart {
+          color: white;
+          sup{
+            color: black;
+          }
+        }
+
+        a {
+          color: #0d0e10;
+        }
+      }
+    }
+  }
+}
+
+/* Diğer navbar alanlarına ait stiller */
 .banNavbar {
   background-color: #ffcd05;
   .container {
@@ -145,11 +217,11 @@
     animation: dropdownFade 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    li{
+    li {
       .langdropdown-item {
         font-size: 13px;
         transition: background-color 0.2s ease;
-  
+
         &:hover {
           background-color: #f1f1f1;
         }
@@ -168,7 +240,6 @@
     }
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   .burger-menu {

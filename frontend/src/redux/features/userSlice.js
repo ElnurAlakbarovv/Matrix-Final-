@@ -246,7 +246,17 @@ export const updateBasketQuantity = createAsyncThunk(
     }
   }
 );
-
+export const checkoutBasket = createAsyncThunk(
+  "user/checkoutBasket",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(`${baseUrl}/basket/checkout`);
+      return response.data.basket; // Boş səbət qaytarılır
+    } catch (error) {
+      return rejectWithValue(error.response.data.message);
+    }
+  }
+);
 // 📌 Create slice
 export const userSlice = createSlice({
   name: "user",
@@ -344,6 +354,10 @@ export const userSlice = createSlice({
       })
       .addCase(updateProfile.rejected, (state, action) => {
         state.error = action.payload;
+      })
+      .addCase(checkoutBasket.fulfilled, (state) => {
+        state.basket = [];
+        state.status = "succeeded";
       });
   },
 });

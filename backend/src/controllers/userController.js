@@ -7,6 +7,7 @@ import RegisterValidationSchema from "../middleware/validation/RegisterValidatio
 import LoginValidationSchema from "../middleware/validation/LoginValidation.js";
 import ForgotValidationSchema from "../middleware/validation/ForgotValidation.js";
 import product from "../models/productModel.js";
+import mongoose from "mongoose";
 
 export const register = async (req, res) => {
   try {
@@ -385,6 +386,51 @@ export const updateBasketQuantity = async (req, res) => {
       basket: existUser.basket,
     });
   } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+export const checkout = async (req, res) => {
+  const session = await mongoose.startSession(); // Transaction üçün session başlatırıq.
+  session.startTransaction();
+  
+  try {
+    const foundUser = await user.findById(req.user.id).populate("basket.product");
+
+    if (!foundUser || foundUser.basket.length === 0) {
+      return res.status(400).json({ message: "Basket is empty or user not found" });
+    }
+
+    for (const item of foundUser.basket) {
+      const foundProduct = await product.findById(item.product._id).session(session);
+
+      if (!foundProduct) {
+        await session.abortTransaction();
+        return res.status(404).json({ message: `Product ${item.product.name} not found` });
+      }
+
+      if (foundProduct.countInStock < item.quantity) {
+        await session.abortTransaction();
+        return res.status(400).json({
+          message: `Not enough stock for ${item.product.name}. Available: ${foundProduct.countInStock}`
+        });
+      }
+
+      // Məhsul miqdarını azaldırıq
+      foundProduct.countInStock -= item.quantity;
+      await foundProduct.save({ session });
+    }
+
+    // İstifadəçinin səbətini təmizləyirik
+    foundUser.basket = [];
+    await foundUser.save({ session });
+
+    await session.commitTransaction();
+    session.endSession();
+
+    return res.status(200).json({ message: "Checkout completed successfully" });
+  } catch (error) {
+    await session.abortTransaction();
+    session.endSession();
     return res.status(500).json({ message: error.message });
   }
 };
