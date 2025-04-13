@@ -89,3 +89,20 @@
     }
   }
 }
+body.dark{
+  .aboutRide {
+    .numIcon {
+      background-color: #fff;
+      svg {
+        color: black;
+      }
+    }
+    h3 {
+      color: #fff;
+    }
+    div {
+      font-size: 16px;
+      color: #cbcbcb;
+    }
+  }
+}

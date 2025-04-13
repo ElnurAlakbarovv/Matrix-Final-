@@ -83,3 +83,39 @@
     }
   }
 }
+body.dark {
+  .footer {
+    background-color: white;
+    color: #0d0e10;
+    .bike-logo {
+      svg {
+        color: white;
+      }
+    }
+    .footer-contact-text {
+      color: #0d0e108a;
+    }
+    .footer-contact {
+      .footer-contact-item {
+        &:hover {
+          color: #fcb424;
+        }
+        svg {
+          color: #0d0e108a;
+        }
+        .footer-contact-label {
+          color: #0d0e108a;
+        }
+      }
+    }
+    .footer-email {
+      .footer-send-Mail {
+        border: 1px solid #0d0e108a;
+
+        input {
+          color: #0d0e108a;
+        }
+      }
+    }
+  }
+}

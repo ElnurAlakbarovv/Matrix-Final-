@@ -80,3 +80,19 @@
     }
   }
 }
+
+body.dark{  
+  .blog-content {
+    h6 {
+      color: #cbcbcb;
+    }
+    h2 {
+      color: white;
+    }
+    p {
+      font-size: 20px;
+      color: #cbcbcb;
+    }
+  }
+  
+}

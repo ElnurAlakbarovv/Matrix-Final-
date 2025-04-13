@@ -154,6 +154,25 @@
     color: #2c3e50;
   }
 }
+.checkout-btn{
+
+    background: #0d0e10;
+    color: white;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white;
+      color: #0d0e10;
+    }
+  
+}
 .questionBasket {
   background-color: #0d0e10 !important;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -221,4 +240,112 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-out forwards;
+  
+  .modal-content {
+    background: #fefefe;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 25px;
+    animation: slideUp 0.4s ease-out forwards;
+    font-family: "Wix Madefor Display", serif;
+    text-align: left;
+
+    h2 {
+      font-size: 28px;
+      color: #0d0e10;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .checkout-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+
+      input {
+        padding: 12px 16px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        transition: border 0.3s ease;
+
+        &:focus {
+          border-color: #ffcd05;
+        }
+      }
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 0 10px 0 0;
+
+      &:first-of-type {
+        background-color: #0d0e10;
+        color: white;
+
+        &:hover {
+          background-color: #ffffff;
+          color: #0d0e10;
+          border: 2px solid #0d0e10;
+        }
+      }
+
+      &:last-of-type {
+        background-color: transparent;
+        color: #e74c3c;
+        border: 2px solid #e74c3c;
+
+        &:hover {
+          background-color: #e74c3c;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

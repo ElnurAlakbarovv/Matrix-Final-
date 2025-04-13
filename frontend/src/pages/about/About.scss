@@ -193,3 +193,40 @@
     }
   }
 }
+body.dark {
+  .aboutPage {
+    h2 {
+      color: white;
+    }
+    .aboutContent {
+      .textContent {
+        h3 {
+          color: white;
+        }
+        div {
+          color: #cbcbcb;
+        }
+      }
+    }
+    .whoWeAre {
+      p {
+        color: #cbcbcb;
+      }
+      .persons {
+        h3 {
+          color: white;
+        }
+        .socialNetwork {
+          span {
+            svg {
+              color: #cbcbcb;
+              &:hover {
+                color: #ffcd05;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

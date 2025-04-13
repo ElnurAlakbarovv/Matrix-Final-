@@ -126,3 +126,43 @@
     }
   }
 }
+
+
+body.dark{
+  .contact {
+    .contact-text {
+      .contactContent {
+        h3 {
+          color: white;
+        }
+        p {
+          color: #cbcbcb;
+        }
+        .socialNetwork {
+          span {
+            svg {
+              color: #cbcbcb;
+              &:hover {
+                color: #ffcd05;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-form {  
+      .submit-btn {
+        background-color: #cbcbcb;
+        color: black;
+      }
+  label{
+    color: #cbcbcb;
+  }
+      .submit-btn:hover {
+        background-color: #000;
+        color: white  ;
+      }
+    }
+  }
+  
+}

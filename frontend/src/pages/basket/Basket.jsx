@@ -27,13 +27,13 @@ const Basket = () => {
   
   const [coupon, setCoupon] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [showModal, setShowModal] = useState(false); // state for modal visibility
+  const [showModal, setShowModal] = useState(false); 
   const [modalData, setModalData] = useState({
     name: "",
     address: "",
     phone: "",
     email: ""
-  }); // Form data
+  }); 
 
   const applyCoupon = () => {
     if (coupon === "HELLO20") {
@@ -46,7 +46,6 @@ const Basket = () => {
   };
 
   const handleCheckout = () => {
-    // Triggering the modal to show up before checkout logic
     setShowModal(true);
   };
 
@@ -56,7 +55,6 @@ const Basket = () => {
       return;
     }
 
-    // Proceed with checkout
     dispatch(checkoutBasket())
       .unwrap()
       .then(() => {
@@ -161,7 +159,7 @@ const Basket = () => {
         </p>
 
         <button
-          className=""
+          className="checkout-btn"
           onClick={handleCheckout}
           disabled={basket.length === 0}
         >

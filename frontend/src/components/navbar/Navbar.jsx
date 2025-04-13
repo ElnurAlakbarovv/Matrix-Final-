@@ -11,6 +11,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdLanguage, MdOutlineAlternateEmail } from "react-icons/md";
 import axios from "axios";
+import { BsTools } from "react-icons/bs";
 import {
   getBasket,
   getWishlist,
@@ -177,11 +178,11 @@ const Navbar = () => {
             </div>
             <div className="language-dropdown dropdown">
               <button
-                className="btn btn-light text-dark fs-5"
+                className="btn btn-light text-dark fs-5 "
                 type="button"
                 data-bs-toggle="dropdown"
               >
-                <MdLanguage />
+                <BsTools />
               </button>
               <ul className="dropdown-menu">
                 <li>
