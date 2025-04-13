@@ -1,0 +1,149 @@
+.hero-section {
+  background-color: #0d0e10 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://startersites.io/blocksy/e-bike/wp-content/uploads/2024/05/background-pattern-2.svg");
+  background-position: center;
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Wix Madefor Display", serif;
+  .heroLeft {
+    h2 {
+      font-size: 70px;
+      margin-bottom: 40px;
+    }
+    button {
+      background-color: #ffcd05;
+      font-weight: 600;
+      color: black;
+      cursor: pointer;
+      width: 180px;
+      font-size: 18px;
+      padding: 20px 0;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #fcb424;
+        color: #0d0e10;
+      }
+    }
+    .heroLeftInside {
+      h1 {
+        font-weight: 700;
+      }
+      div {
+        font-weight: 600;
+      }
+    }
+  }
+  .heroRight {
+    div {
+      color: #ffffff9c;
+      padding: 0 100px;
+    }
+    .heroRightImage {
+      max-width: 620px;
+      img {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+.hero-bottom {
+  .hero-bottom-left {
+    max-width: 620px;
+    max-height: 314px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      margin-top: 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .hero-section {
+    height: 100%;
+    .heroLeft {
+      h2 {
+        font-size: 40px;
+      }
+      .heroButtonDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .heroRight {
+      .heroRightImage {
+        max-width: 720px;
+        img {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .hero-bottom {
+    .hero-bottom-left {
+      max-width: 720px;
+      max-height: 314px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 100%;
+    .heroLeft {
+      h2 {
+        font-size: 40px;
+      }
+      .heroButtonDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .heroLeftInside {
+        text-align: center;
+        div {
+          margin: 10px;
+        }
+      }
+    }
+    .heroRight {
+      .heroRightImage {
+        max-width: 720px;
+        img {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .hero-bottom {
+    .hero-bottom-left {
+      max-width: 720px;
+      max-height: 314px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.basket-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fdcd05;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .coupon-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: 0.3s;
+      width: 200px;
+  
+      &:focus {
+        border-color: #ffcd05;
+      }
+    }
+  
+    button {
+      background: #0d0e10;
+      color: white;
+      margin: 0;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background: #f8c600;
+        color: #0d0e10;
+      }
+    }
+  }
+  
+
+  .basket-item {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr 1fr 140px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: 0.3s;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 20px;
+      font-weight: 600;
+      gap: 5px;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    .item-quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        margin: 0;
+        background: #ddd;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: #bbb;
+        }
+
+        &:disabled {
+          background: #e0e0e0;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .remove-btn {
+      margin: 0;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #c0392b;
+      }
+    }
+  }
+
+  .total {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+}
+.questionBasket {
+  background-color: #0d0e10 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://startersites.io/blocksy/e-bike/wp-content/uploads/2024/04/shop-contact-section-image.webp");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Wix Madefor Display", serif;
+  .questionBox {
+    background-color: #ffcd05;
+    color: #0d0e10;
+    max-width: 451px;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #0d0e10;
+      margin-bottom: 50px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0d0e10;
+      padding: 20px 22px;
+      max-width: 169px;
+      transition: all 0.3s ease;
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+      &:hover {
+        background-color: #ffffff;
+        color: #0d0e10;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.registerPage {
+  font-family: "Wix Madefor Display", serif;
+  form {
+    display: flex;
+    gap: 10px;
+    background-color: transparent !important;
+    label {
+      color: #535353;
+      font-size: 14px;
+    }
+    button {
+      background-color: #ffcd05;
+      border: none;
+      color: #0d0e10;
+      font-weight: 600;
+      &:hover {
+        background-color: #fcb424;
+      }
+    }
+  }
+}

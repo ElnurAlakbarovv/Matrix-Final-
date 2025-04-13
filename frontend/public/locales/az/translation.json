@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Sizi Avtomobillərin Getmədiyi Yerlərə Aparırıq",
+    "button": "Mağazaya keç",
+    "desc": "Lacus nulla curabitur elit mi tempor habitasse non urna ultrices in pretium amet et sem. Rutrum amet nisl amet massa pellentesque cras aliquam at consectetur pulvinar malesuada aliquam.",
+    "stats": {
+      "customers": "Dünya üzrə Müştərilər",
+      "reviews": "Möhtəşəm Rəylər",
+      "shops": "Dünya üzrə Mağazalar"
+    }
+  },
+  "navbar": {
+    "email": "elnurha-af106@code.edu.az",
+    "phone": "077-636-00-60",
+    "address": "Nizami küçəsi 203B, AF Business House, 2-ci mərtəbə, Bakı 1000",
+    "home": "ƏSAS SƏHİFƏ",
+    "shop": "MAĞAZA",
+    "about": "HAQQIMIZDA",
+    "blog": "BLOQ",
+    "contact": "ƏLAQƏ",
+    "logout": "Çıxış",
+    "login": "Daxil ol",
+    "register": "Qeydiyyat"
+  }
+}

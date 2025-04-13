@@ -1,0 +1,138 @@
+.cards {
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+
+    .card-buttons {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .image {
+    width: 410px;
+    height: 308px;
+
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 1rem;
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0d0e10;
+    }
+
+    .card-price {
+      font-size: 15px;
+      font-weight: 600;
+      color: #535353;
+      padding-top: 10px;
+    }
+  }
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 115px;
+  left: 40%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  align-items: center;
+  height: 40px;
+  align-items: center;
+
+  button {
+    border: none;
+    color: #0d0e10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #ffcd05;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    width: 516px !important;
+    height: 398px !important;
+
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+
+.questionWishlist {
+  background-color: #0d0e10 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://cdn.shopify.com/s/files/1/0449/1496/6691/files/2023---RF-Marz---Lucy-Van-Eesteren---CGP---Liam-Wallace-FULL-RES-0635.jpg?v=1702572163");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Wix Madefor Display", serif;
+  .questionBox {
+    background-color: #ffcd05;
+    color: #0d0e10;
+    max-width: 451px;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #0d0e10;
+      margin-bottom: 50px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0d0e10;
+      padding: 20px 22px;
+      max-width: 169px;
+      transition: all 0.3s ease;
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+      &:hover {
+        background-color: #ffffff;
+        color: #0d0e10;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.home-banner {
+  background-color: #0d0e10 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://startersites.io/blocksy/e-bike/wp-content/uploads/2024/05/background-pattern-2.svg");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Wix Madefor Display", serif;
+  .hero-banner-icon {
+    svg {
+      width: 60px;
+      height: 60px;
+      color: #ffcd05;
+      margin: 5px 10px 0 0;
+    }
+  }
+  .hero-banner-text {
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    div {
+      font-size: 16px;
+      color: #ffffff9c;
+    }
+  }
+  .bottomBannerAll {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .banner-bottom {
+    align-content: end;
+    padding: 25px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+    }
+    div {
+      color: #ffffff9b;
+    }
+  }
+  .banImg-1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+      url("https://www.atb.no/getfile.php/13111036-1711018618/Bilder/Aktueltbilder/bysykler-atb_foto-Terje-Trobe-07.jpg%20%28content_full_width%29.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 400px;
+  }
+  .banImg-2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+      url("https://images.giant-bicycles.com/kl3h00cvovzjp3ile6ih/preview.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 400px;
+  }
+  .banImg-3 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+      url("https://www.reidcycles.com.au/cdn/shop/files/reid-full-suspension-electric-mountain-bike.jpg?v=1685519175&width=3840");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .banner-top-list {
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,69 @@
+.detail-image {
+  height: 400px !important;
+  width: 500px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+.detail-content {
+  font-family: "Wix Madefor Display", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0e10;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #535353;
+  }
+  button {
+    background-color: #ffcd05;
+    border: none;
+    color: #535353;
+    font-weight: 600;
+    width: 300px;
+    &:hover {
+      background-color: #fcb424;
+      color: #0d0e10;
+    }
+  }
+}
+.detail-breadcrumb {
+  font-family: "Wix Madefor Display", serif;
+  span {
+    font-size: 16px;
+    color: #fcb424;
+    font-weight: 700;
+    &:nth-child(7) {
+      color: #535353;
+    }
+  }
+}
+.sameProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .detail-image {
+    height: 350px !important;
+    width: 450px !important;
+
+    img {
+      width: 100%;
+      height: 100%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+  }
+}

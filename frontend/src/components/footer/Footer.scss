@@ -1,0 +1,85 @@
+.footer {
+  font-family: "Wix Madefor Display", serif;
+  background-color: #0d0e10;
+  color: white;
+  .bike-logo {
+    margin-bottom: 7px;
+    svg {
+      width: 100px;
+      height: 50px;
+      color: white;
+    }
+  }
+  .footer-contact-text {
+    color: #ffffff8a;
+  }
+  .footer-contact {
+    display: flex;
+    gap: 50px;
+    padding: 30px 0;
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        color: #fcb424;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        color: #ffffff8a;
+        margin-right: 10px;
+      }
+      div {
+        font-size: 15px;
+      }
+      .footer-contact-label {
+        color: #ffffff8a;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+  .footer-email {
+    h3 {
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .footer-send-Mail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ffffff8a;
+      border-radius: 8px;
+      padding: 5px;
+      margin-top: 30px;
+
+      input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #ffffff8a;
+        height: 50px;
+        width: 446px;
+        border-radius: 8px;
+        padding: 0 12px;
+      }
+      button {
+        margin: 0;
+        height: 50px;
+        background-color: #ffcd05;
+        color: #0d0e10;
+        padding: 5px 25px;
+        width: 130px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #fcb424;
+        }
+      }
+    }
+  }
+}

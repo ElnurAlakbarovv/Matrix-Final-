@@ -1,0 +1,91 @@
+.nataliBanner {
+  font-family: "Wix Madefor Display", serif;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://startersites.io/blocksy/e-bike/wp-content/uploads/2024/04/testimonials-background.webp");
+  height: 628px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      position: absolute;
+      top: 114px;
+      width: 400px;
+      height: 400px;
+      color: #ffcb05;
+      opacity: 0.4;
+    }
+    em {
+      position: absolute;
+      font-size: 24px;
+      width: 792px !important;
+      text-align: center;
+      top: 220px;
+    }
+    span {
+      position: absolute;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      top: 410px;
+    }
+  }
+}
+.aboutRide {
+  .numIcon {
+    margin-right: 20px;
+    background-color: #0d0e10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 3px;
+    svg {
+      color: white;
+      width: 26px;
+      height: 26px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d0e10;
+  }
+  div {
+    font-size: 16px;
+    color: #535353;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .nataliBanner {
+    .em {
+      font-size: 20px;
+      width: 650px !important;
+    }
+    svg {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .nataliBanner {
+    .em {
+      font-size: 18px;
+      width: 500px !important;
+    }
+    svg {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}

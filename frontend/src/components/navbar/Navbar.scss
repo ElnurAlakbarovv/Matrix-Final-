@@ -1,0 +1,212 @@
+.navbar-section {
+  .navbar {
+    padding: 14px 0;
+    background-color: #0d0e10;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .bike-logo {
+        svg {
+          width: 100px;
+          height: 50px;
+          color: white;
+        }
+      }
+      .userNameNav{color: #fff;}
+      .navlist {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+        font-family: "Wix Madefor Display", serif;
+        font-size: 12px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+      }
+
+      a {
+        font-weight: bold !important;
+        color: white;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #fcb424;
+        }
+      }
+
+      sup {
+        font-size: 13px;
+        font-weight: lighter !important;
+        color: white;
+        padding: 2px;
+      }
+    }
+
+    .dropdown {
+      button {
+        margin: 0;
+        background-color: #fcb424;
+        color: #0d0e10;
+        font-weight: bold;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #ffcd05;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      li,
+      a {
+        color: #0d0e10 !important;
+      }
+    }
+  }
+}
+
+.banNavbar {
+  background-color: #ffcd05;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 13px;
+
+    svg {
+      font-size: 16px;
+      margin: 0 4px;
+    }
+
+    .banNavbar-left {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .banNavbar {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.burger-menu.active {
+  transform: rotate(90deg);
+}
+.language-dropdown {
+  position: relative;
+  margin-left: 10px;
+
+  button.btn-light {
+    font-size: 13px;
+    padding: 4px 8px;
+    height: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #e2e6ea;
+      transform: scale(1.03);
+    }
+  }
+
+  .dropdown-menu {
+    padding: 4px 0;
+    border-radius: 6px;
+    animation: dropdownFade 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    li{
+      .langdropdown-item {
+        font-size: 13px;
+        transition: background-color 0.2s ease;
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  }
+
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+  .dropdown {
+    li {
+      a {
+        color: #fcb424;
+      }
+    }
+  }
+  .navlist {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: #0d0e10;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      visibility 0.5s;
+  }
+
+  .navlist.open {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 50px;
+  }
+
+  .navlist-item {
+    padding: 10px 0px;
+  }
+}
