@@ -15,6 +15,7 @@ import {
   getMe,
   updateProfile,
   updateBasketQuantity,
+  checkout,
 } from "../controllers/userController.js";
 import upload from "../upload/upload.js";
 import { protect } from "../middleware/authMiddleware.js";
@@ -37,4 +38,6 @@ userRouter.get("/basket", protect, getBasket);
 userRouter.get("/wishlist", protect, getWishlist);
 
 userRouter.get("/me", protect, getMe);
+userRouter.post("/basket/checkout", protect, checkout);
+
 export default userRouter;

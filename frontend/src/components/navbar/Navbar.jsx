@@ -19,13 +19,26 @@ import {
 import showToast from "../Toasts";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
+// theme slice’inden toggleDarkMode aksiyonunu import edin
+import { toggleDarkMode } from "../../redux/features/themeSlice";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const baseUrl = "http://localhost:5000/auth";
   const { user, basket, wishlist } = useSelector((state) => state.user);
+  // theme reducer'ından darkMode değerini çekiyoruz
+  const { darkMode } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Dark mode sınıfını body'e ekleyin
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   const handleLogout = async () => {
     const res = await axios.post(`${baseUrl}/logout`);
@@ -189,6 +202,15 @@ const Navbar = () => {
                     }}
                   >
                     En
+                  </button>
+                </li>
+                {/* Dark/Light Mode Toggle Seçeneğini Ekliyoruz */}
+                <li>
+                  <button
+                    className="langdropdown-item"
+                    onClick={() => dispatch(toggleDarkMode())}
+                  >
+                    {darkMode ? "Dark Mode" : "Light Mode"}
                   </button>
                 </li>
               </ul>
